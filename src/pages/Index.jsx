@@ -5,7 +5,7 @@ import { FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const fullText = "collective.vc";
-  const typingSpeed = 150; // Speed in milliseconds
+  const typingSpeed = 150;
 
   useEffect(() => {
     let index = 0;
@@ -25,7 +25,10 @@ const Index = () => {
       <VStack spacing={8} align="flex-start">
         <Text fontSize="4xl" fontWeight="bold" whiteSpace="pre-wrap">
           {displayText}
-          <Box as="span" animation="blink 1s step-end infinite" _after={{ content: '"|"', animation: "blink 1s step-end infinite" }} />
+          {displayText.length === fullText.length ? null : <Box as="span" animation="blink 1s step-end infinite" _after={{ content: '"|"', animation: "blink 1s step-end infinite" }} />}
+        </Text>
+        <Text fontSize="2xl" fontWeight="bold" whiteSpace="pre-wrap">
+          Coming Soon
         </Text>
         <HStack spacing={10} justify="center" width="100%">
           <Box as={FaLinkedin} boxSize="50px" />
