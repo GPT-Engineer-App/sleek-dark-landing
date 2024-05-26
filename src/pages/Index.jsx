@@ -25,7 +25,6 @@ const Index = () => {
       <VStack spacing={8} align="flex-start">
         <Text fontSize="4xl" fontWeight="bold" whiteSpace="pre-wrap">
           {displayText}
-          {displayText.length === fullText.length ? null : <Box as="span" animation="blink 1s step-end infinite" _after={{ content: '"|"', animation: "blink 1s step-end infinite" }} />}
         </Text>
         <Text fontSize="2xl" fontWeight="bold" whiteSpace="pre-wrap">
           Coming Soon
